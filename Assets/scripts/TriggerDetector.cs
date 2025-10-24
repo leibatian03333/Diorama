@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class TriggerDetector : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.gameObject.name == "microwave") 
+        {
+            Debug.Log("Food is in the microwave!");
+        }
     }
 }
+
